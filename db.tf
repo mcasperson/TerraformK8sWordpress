@@ -5,7 +5,7 @@ module "db" {
 
   engine            = "mysql"
   engine_version    = "5.7.25"
-  instance_class    = "db.t3a.medium"
+  instance_class    = "db.t3.small"
   allocated_storage = 5
 
   db_name  = "wordpress"
@@ -18,11 +18,6 @@ module "db" {
 
   maintenance_window = "Mon:00:00-Mon:03:00"
   backup_window      = "03:00-06:00"
-
-  tags = {
-    Owner       = "user"
-    Environment = "dev"
-  }
 
   # DB subnet group
   create_db_subnet_group = true

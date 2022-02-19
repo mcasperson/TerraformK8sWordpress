@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 provider "kubernetes" {
-  host     = "9581B0295D9677654019234974C59512.gr7.us-west-2.eks.amazonaws.com"
+  host     = "https://9581B0295D9677654019234974C59512.gr7.us-west-2.eks.amazonaws.com"
   insecure = true
 
   exec {
