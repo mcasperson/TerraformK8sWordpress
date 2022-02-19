@@ -3,6 +3,8 @@ module "db" {
 
   identifier = "wordpress"
 
+  publicly_accessible = true
+
   engine            = "mysql"
   engine_version    = "5.7.25"
   instance_class    = "db.t3.small"

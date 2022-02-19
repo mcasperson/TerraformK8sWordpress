@@ -31,6 +31,10 @@ resource "kubernetes_deployment" "wordpress" {
             name = "WORDPRESS_DB_PASSWORD"
             value = module.db.db_instance_password
           }
+          env {
+            name = "WORDPRESS_DB_USER"
+            value = module.db.db_instance_username
+          }
         }
       }
     }
