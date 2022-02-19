@@ -20,12 +20,5 @@ provider "aws" {
 }
 
 provider "kubernetes" {
-  host     = "https://9581B0295D9677654019234974C59512.gr7.us-west-2.eks.amazonaws.com"
-  insecure = true
-
-  exec {
-    api_version = "client.authentication.k8s.io/v1alpha1"
-    args        = ["token", "--cluster-id", "my-cluster"]
-    command     = "aws-iam-authenticator"
-  }
+  config_path    = "~/.kube/config"
 }
