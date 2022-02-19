@@ -24,8 +24,12 @@ resource "kubernetes_deployment" "wordpress" {
             container_port = 80
           }
           env {
-            WORDPRESS_DB_HOST = module.db.db_instance_address
-            WORDPRESS_DB_PASSWORD = module.db.db_instance_password
+            name = "WORDPRESS_DB_HOST"
+            value = module.db.db_instance_address
+          }
+          env {
+            name = "WORDPRESS_DB_PASSWORD"
+            value = module.db.db_instance_password
           }
         }
       }
