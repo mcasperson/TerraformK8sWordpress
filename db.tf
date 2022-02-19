@@ -5,7 +5,7 @@ module "db" {
 
   engine            = "mysql"
   engine_version    = "5.7.25"
-  instance_class    = "db.t3a.small"
+  instance_class    = "db.t3a.medium"
   allocated_storage = 5
 
   db_name  = "wordpress"
