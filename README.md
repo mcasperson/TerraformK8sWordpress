@@ -1,1 +1,1 @@
-# TerraformK8sWordpress
+An example WordPress deployment implemented with Terraform creating an AWS RDS instance and a Kubernetes deployment.
