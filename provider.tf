@@ -20,5 +20,6 @@ provider "aws" {
 }
 
 provider "kubernetes" {
+  # Set this value to "/etc/rancher/k3s/k3s.yaml" if using K3s
   config_path    = "~/.kube/config"
 }
